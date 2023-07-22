@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDIT</title>
+</head>
+<body>
+    <a href="/display">Display</a>
+    <form method="POST" action="update/">
+        {% csrf_token %}
+        ID: <input type="text" name="id", value="{{categories.0}}"> <br>
+        Name:<input type="text" name="name", value="{{categories.1}}"> <br>
+        Quantity:<input type="text" name="quantity", value="{{categories.2}}"> <br>
+        Amount:<input type="text" name="amount", value="{{categories.3}}"> <br>
+        <button type="submit"> Update Data </button>
+    </form>
+</body>
+</html>
